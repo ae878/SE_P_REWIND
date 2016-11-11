@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8c08476229b3996d056ecaecdfbb1d38aed1caa3">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4462a8bb9abdfc8d385f8040720eeacf9dfaf06d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ywon\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_d54b28427228f4b8ce06be34a1215260180469dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_b49c31c7087ff34bba22d3672dddadb988ac9a33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_c30020965fbc65e3daee7e2b550214bed3f615c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_8f400e71c896f97c12f01a863eb272745e2d42ca\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_383905f6badf7845351b860a7466af989a3572f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_b3746125d29274e9b556cd00fce1646bd9d354a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidStudy\rewind_se\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e9ab2857c51ce0e93ecdf9053e190d9261698afc">
+        <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4ce468e564b6af4e97f2715d7e607d896aca1637\classes.dex" />
+    </item>
+
+</items>
