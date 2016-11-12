@@ -26,6 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="rewind.hanyang.se.rewind_se.SpectrumActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
         <activity android:name="rewind.hanyang.se.rewind_se.DrawActivity" />
         <activity
             android:name="rewind.hanyang.se.rewind_se.SavePopActivity"

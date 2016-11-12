@@ -18,70 +18,14 @@
             android:layout_height="wrap_content"
             android:text="SAVE"
             android:onClick="onClickSave"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/black"
-
-            android:onClick="onClickBlack"
-            />
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/red"
-            android:onClick="onClickRed"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/green"
-            android:onClick="onClickGreen"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/blue"
-            android:onClick="onClickBlue"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/pink"
-            android:onClick="onClickPink"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/skyblue"
-            android:onClick="onClickSkyBlue"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/yellow"
-            android:onClick="onClickYellow"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="R"
-            android:id="@+id/r"/>
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="G"
-            android:id="@+id/g"/>
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="B"
-            android:id="@+id/b"/>
 
         <Button
-            android:id="@+id/colorInputButton"
+            android:id="@+id/popupSpectrumButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input"
-            android:onClick="onClickInput"/>
+            android:text="Spectum popup"
+            android:onClick="onClickPopUp"/>
+
 
 
 

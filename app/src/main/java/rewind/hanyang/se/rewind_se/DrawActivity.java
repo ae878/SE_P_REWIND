@@ -10,11 +10,20 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewDebug;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -33,10 +42,14 @@ public class DrawActivity extends Activity {
 
     DrawPoint drawPoint; // 그려지는 점들의 데이터
     CanvasView mView; // 그림을 그릴 캔버스
+
     int status;
-    int selectColor;
+    static int selectColor;
 
     Bitmap loadImage = null;
+
+    private PopupWindow pwindo; // popupwindow를 위한 변수
+    ImageView spectrumImage; // 스펙트럼 이미지뷰
 
 
     @Override
@@ -65,6 +78,13 @@ public class DrawActivity extends Activity {
 
         FrameLayout frame = (FrameLayout) findViewById(R.id.drawLayout);
         frame.addView(mView,0);
+
+
+        spectrumImage = (ImageView)findViewById(R.id.spectrumImage);
+        if(spectrumImage!=null)
+        System.out.println("hhh"+spectrumImage.getX()+spectrumImage.getY());
+
+
 
     }
 
@@ -142,10 +162,45 @@ public class DrawActivity extends Activity {
         startActivityForResult(intent,SAVE_IMAGE);
     }
 
+    /*______ onClickPopUp ______
+   * 16-11-12
+   * .스펙트럼 팝업창 띄우는 버튼
+   */
+    public void onClickPopUp(View v){
+     /*   LayoutInflater inflater = (LayoutInflater) DrawActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View layout = inflater.inflate(R.layout.popup_spectrum,(ViewGroup) findViewById(R.id.popupSpectrum));
+
+
+        pwindo = new PopupWindow(layout, MainActivity.SCREEN_WIDTH-100, MainActivity.SCREEN_HEIGHT-500, true);
+        pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+        pwindo.setTouchable(true); // 팝업창 터치 되게 설정
+
+
+        layout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                spectrumX = event.getX();
+                spectrumY= event.getY();
+
+                System.out.println("QQ"+spectrumX+"      "+spectrumY);
+
+                spectrumRGB = (TextView)findViewById(R.id.spectrumRGB);
+                spectrumRGB.setText("hi");
+                return false;
+            }
+        });*/
+
+        startActivity(new Intent(this,SpectrumActivity.class));
+
+    }
+
+
     /*______ onActivityResult ______
-    * 16-10-11
-    *  파일이름을 받는 액티비티로부터 입력된 파일이름을 받아온다.
-    */
+        * 16-10-11
+        *  파일이름을 받는 액티비티로부터 입력된 파일이름을 받아온다.
+        */
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {

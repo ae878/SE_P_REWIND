@@ -1,7 +1,7 @@
-#Fri Nov 11 14:54:44 KST 2016
-base.0=C\:\\AndroidStudy\\rewind_se\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4ce468e564b6af4e97f2715d7e607d896aca1637
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\AndroidStudy\\rewind_se\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_4462a8bb9abdfc8d385f8040720eeacf9dfaf06d\\classes.dex
-base.1=C\:\\AndroidStudy\\rewind_se\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_4462a8bb9abdfc8d385f8040720eeacf9dfaf06d
-file.0=C\:\\AndroidStudy\\rewind_se\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4ce468e564b6af4e97f2715d7e607d896aca1637\\classes.dex
+#Sat Nov 12 23:20:49 KST 2016
+base.0=C\:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3f17072e6e2547af95de055a9a79947fc018a4d5
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2f1f762f75fefc6313b70a6ba94b9bccfeffb165\\classes.dex
+base.1=C\:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2f1f762f75fefc6313b70a6ba94b9bccfeffb165
+file.0=C\:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3f17072e6e2547af95de055a9a79947fc018a4d5\\classes.dex

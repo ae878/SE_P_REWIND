@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SpectrumActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Translucent"        />
         <activity android:name=".DrawActivity"/>
         <activity android:name=".SavePopActivity" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"/>
     </application>
