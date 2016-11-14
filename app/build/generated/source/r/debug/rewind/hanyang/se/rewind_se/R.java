@@ -1892,6 +1892,8 @@ containing a value of this type.
         public static final int topPanel=0x7f0b0031;
         public static final int up=0x7f0b0008;
         public static final int useLogo=0x7f0b0012;
+        public static final int valueDown=0x7f0b0073;
+        public static final int valueUp=0x7f0b0072;
         public static final int withText=0x7f0b0021;
         public static final int wrap_content=0x7f0b0019;
     }

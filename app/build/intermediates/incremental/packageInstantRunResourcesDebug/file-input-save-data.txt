@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Nov 14 22:59:17 KST 2016
+#Mon Nov 14 23:17:47 KST 2016
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\abc_secondary_text_material_dark.xml
 118.set=ANDROID_RESOURCE

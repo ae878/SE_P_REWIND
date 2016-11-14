@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,12 @@ public class SpectrumActivity extends Activity {
 
     ImageView spectrumImage; // 스펙트럼 터치 좌표를 얻기 위한 변수
     ImageView showColor ; // 스펙트럼에서 선택한 색 보여줌
+
+    Button valueUp;
+    Button valueDown;
+
+    float hsv[] = new float[3];
+    int colorValue=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,9 @@ public class SpectrumActivity extends Activity {
 
         spectrumImage = (ImageView)findViewById(R.id.spectrumImage);
         showColor = (ImageView)findViewById(R.id.showcolor);
+        valueDown = (Button)findViewById(R.id.valueDown);
+        valueUp= (Button)findViewById(R.id.valueUp);
+
 
         spectrumImage.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -57,9 +67,26 @@ public class SpectrumActivity extends Activity {
                 DrawActivity.selectColor=Color.argb(255,R,G,B); // 펜 색 설정
                 showColor.setBackgroundColor(Color.argb(255,R,G,B)); //설정한 색 보여주기
 
+                Color.RGBToHSV(R,G,B,hsv);
                 return false;
             }
         });
+
     }
+    public void onClickValueUP(View v){
+       
+        hsv[2] = hsv[2]+(float)0.01;
+
+        DrawActivity.selectColor=Color.HSVToColor(hsv);; // 펜 색 설정
+        showColor.setBackgroundColor( Color.HSVToColor(hsv)); //설정한 색 보여주기
+    }
+
+    public void onClickValueDown(View v){
+        hsv[2] = hsv[2]-(float)0.01;
+
+        DrawActivity.selectColor=Color.HSVToColor(hsv);; // 펜 색 설정
+        showColor.setBackgroundColor(Color.HSVToColor(hsv)); //설정한 색 보여주기
+    }
+
 }
 

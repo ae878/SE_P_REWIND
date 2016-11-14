@@ -599,6 +599,8 @@ int id top 0x7f0b0023
 int id topPanel 0x7f0b0031
 int id up 0x7f0b0008
 int id useLogo 0x7f0b0012
+int id valueDown 0x7f0b0073
+int id valueUp 0x7f0b0072
 int id withText 0x7f0b0021
 int id wrap_content 0x7f0b0019
 int integer abc_config_activityDefaultDur 0x7f0c0000
