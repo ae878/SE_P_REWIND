@@ -1,5 +1,6 @@
 package rewind.hanyang.se.rewind_se;
 
+import android.graphics.Color;
 import android.graphics.Paint;
 
 /**
@@ -7,30 +8,43 @@ import android.graphics.Paint;
  */
 
 public class Pen extends Paint {
+    static final int PENCIL = 0;
+    static final int ERASER = 1;
+    static final int HIGHLIGHTER = 2;
 
-    public Pen(int color){
+    public int type;
+
+    public Pen(int color , int type){
         this.setColor(color);
+        this.setType(type);
         this.setStyle(Style.STROKE);
         this.setStrokeWidth((float)20.0);
-       // BlurMaskFilter blur = new BlurMaskFilter(100,BlurMaskFilter.Blur.NORMAL);
-        //this.setMaskFilter(blur);
-
-      //  CornerPathEffect cE = new CornerPathEffect(50.0f);
-       // this.setPathEffect(cE);
         this.setAntiAlias(true);
-
-    //    this.setStrokeCap(Cap.ROUND);
-
-        //this.setDither(true);
-      //  this.setAlpha(20);
-       // this.setStrokeJoin(Join.ROUND);
-       // this.setStrokeCap(Cap.ROUND);
+    }
+    public Pen(Pen pen){
+        this.setType(pen.type);
+        this.setColor(pen.getColor());
+        this.setAlpha(pen.getAlpha());
+        this.setStrokeWidth(pen.getStrokeWidth());
+        this.setAntiAlias(true);
     }
 
-    public void setPenColor( int color){
-        this.setColor(color);
-    }
-    public int getPenColor(){
-        return this.getColor();
+    public void setType(int type){
+        this.type = type;
+        switch(this.type){
+            case PENCIL:
+                this.setStyle(Style.STROKE);
+                this.setStrokeWidth((float)20.0);
+                this.setAntiAlias(true);
+                this.setAlpha(255);
+                break;
+            case ERASER:
+                this.setAlpha(255);
+                this.setColor(Color.WHITE);
+                break;
+            case HIGHLIGHTER:
+                this.setAlpha(30);
+                break;
+        }
     }
 }

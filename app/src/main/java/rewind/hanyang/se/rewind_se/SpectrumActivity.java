@@ -64,7 +64,7 @@ public class SpectrumActivity extends Activity {
                 int G = (mPixel & 0x00ff00) >> 8;
                 int B = (mPixel & 0x0000ff) >> 0;
 
-                DrawActivity.selectColor=Color.argb(255,R,G,B); // 펜 색 설정
+                DrawActivity.selectPen.setColor(Color.argb(255,R,G,B)); // 펜 색 설정
                 showColor.setBackgroundColor(Color.argb(255,R,G,B)); //설정한 색 보여주기
 
                 Color.RGBToHSV(R,G,B,hsv);
@@ -77,14 +77,14 @@ public class SpectrumActivity extends Activity {
        
         hsv[2] = hsv[2]+(float)0.01;
 
-        DrawActivity.selectColor=Color.HSVToColor(hsv);; // 펜 색 설정
+        DrawActivity.selectPen.setColor(Color.HSVToColor(hsv)); // 펜 색 설정
         showColor.setBackgroundColor( Color.HSVToColor(hsv)); //설정한 색 보여주기
     }
 
     public void onClickValueDown(View v){
         hsv[2] = hsv[2]-(float)0.01;
 
-        DrawActivity.selectColor=Color.HSVToColor(hsv);; // 펜 색 설정
+        DrawActivity.selectPen.setColor(Color.HSVToColor(hsv)); // 펜 색 설정
         showColor.setBackgroundColor(Color.HSVToColor(hsv)); //설정한 색 보여주기
     }
 

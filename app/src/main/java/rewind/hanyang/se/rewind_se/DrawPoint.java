@@ -24,10 +24,10 @@ public class DrawPoint {
         float y;
         boolean draw;
         Pen pen;
-        public TouchPoint(float x, float y, int selectColor){
+        public TouchPoint(float x, float y, Pen pen){
             this.x = x;
             this.y = y;
-            this.pen = new Pen( selectColor);
+            this.pen = new Pen(pen);
         }
     }
 
@@ -42,8 +42,8 @@ public class DrawPoint {
     public void pointClear(){arrayTouchPoint.clear();}
 
 
-    public void addPoint(float x, float y, boolean draw , int selectColor){
-        arrayTouchPoint.add(new TouchPoint(x,y,selectColor));
+    public void addPoint(float x, float y, boolean draw , Pen pen){
+        arrayTouchPoint.add(new TouchPoint(x,y,pen));
         arrayTouchPoint.get(arrayTouchPoint.size()-1).draw = draw;
     }
 }

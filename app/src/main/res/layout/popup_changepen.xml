@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/drawLayout"
+    android:id="@+id/mainLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
@@ -9,35 +9,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
         <Button
-            android:id="@+id/saveButton"
+            android:id="@+id/pencil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SAVE"
-            android:onClick="onClickSave"/>
+            android:text="pencil"
+            android:onClick="onClickPencil"/>
 
         <Button
-            android:id="@+id/popupSpectrumButton"
+            android:id="@+id/highlighter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Spectum popup"
-            android:onClick="onClickPopUp"/>
+            android:text="highlighter"
+            android:onClick="onClickHighlighter"
+            />
         <Button
-            android:id="@+id/popupChangePen"
+            android:id="@+id/eraser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ChagePen"
-            android:onClick="onClickChangePen"/>
-
-
-
-
-
+            android:text="eraser"
+            android:onClick="onClickEraser"
+            />
     </LinearLayout>
 
 
 </FrameLayout>
-

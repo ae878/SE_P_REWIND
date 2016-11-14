@@ -44,7 +44,8 @@ public class DrawActivity extends Activity {
     CanvasView mView; // 그림을 그릴 캔버스
 
     int status;
-    static int selectColor;
+
+    static Pen selectPen;
 
     Bitmap loadImage = null;
 
@@ -96,7 +97,7 @@ public class DrawActivity extends Activity {
         mView = new CanvasView(this); // 그림을 그릴 뷰
         mView.setDrawingCacheEnabled(true); // view 가 변할때 마다 Cache로 저장
         drawPoint = new DrawPoint(); // 터치된 점을 관리 할 Class
-        this.selectColor = Color.BLACK; // 초기 색은 검은색
+        selectPen = new Pen(Color.BLACK, Pen.PENCIL);
     }
 
     /*______ onTouchEvent ______
@@ -109,11 +110,11 @@ public class DrawActivity extends Activity {
         switch (event.getAction()){
 
             case MotionEvent.ACTION_DOWN: // 터치 가 시작되었을 때
-                drawPoint.addPoint(event.getX(), event.getY(),false, selectColor);// 터치된 좌표를 drawPoint에 넘겨준다.
+                drawPoint.addPoint(event.getX(), event.getY(),false, selectPen);// 터치된 좌표를 drawPoint에 넘겨준다.
                 mView.invalidate(); // view 를 다시 그린다.
 
             case MotionEvent.ACTION_MOVE: // 터치되고 움직일 때
-                drawPoint.addPoint(event.getX(),event.getY(),true,selectColor);  // 터치된 좌표를 drawPoint에 넘겨준다.
+                drawPoint.addPoint(event.getX(),event.getY(),true,selectPen);  // 터치된 좌표를 drawPoint에 넘겨준다.
                 mView.invalidate(); // view 를 다시 그린다.
 
         }
@@ -196,6 +197,14 @@ public class DrawActivity extends Activity {
 
     }
 
+    /*______ onClickChangePen ______
+   * 16-11-15
+   *  펜의 종류를 편경하는 팝업
+   */
+    public void onClickChangePen(View v){
+        startActivity(new Intent(this,ChangePenActivity.class));
+    }
+
 
     /*______ onActivityResult ______
         * 16-10-11
@@ -257,7 +266,7 @@ public class DrawActivity extends Activity {
      * .페인트 색 레드로 변경
      */
     public void onClickRed(View v){
-        selectColor = Color.RED;
+        selectPen.setColor(Color.RED);
     }
 
     /*______ onClickBlue ______
@@ -265,7 +274,7 @@ public class DrawActivity extends Activity {
      * .페인트 색 블루로 변경
      */
     public void onClickBlue(View v){
-        selectColor = Color.BLUE;
+        selectPen.setColor(Color.BLUE);
     }
 
 
@@ -275,7 +284,7 @@ public class DrawActivity extends Activity {
      * .페인트 색 그린으로 변경
      */
     public void onClickGreen(View v){
-        selectColor = Color.GREEN;
+        selectPen.setColor(Color.GREEN);
     }
 
 
@@ -284,7 +293,7 @@ public class DrawActivity extends Activity {
      * 페인트 색 핑크로 변경
      */
     public void onClickPink(View v){
-        selectColor = Color.MAGENTA;
+        selectPen.setColor(Color.MAGENTA);
     }
 
 
@@ -293,7 +302,7 @@ public class DrawActivity extends Activity {
      * 페인트 색 하늘색으로 변경
      */
     public void onClickYellow(View v){
-        selectColor = Color.YELLOW;
+        selectPen.setColor(Color.YELLOW);
     }
 
     /*______ onClickSkyYellow ______
@@ -311,7 +320,7 @@ public class DrawActivity extends Activity {
    * 페인트 색 블랙으로 변경
    */
     public void onClickBlack(View v){
-        selectColor = Color.BLACK;
+        selectPen.setColor(Color.BLACK);
     }
 
     /*______ onClickInput ______

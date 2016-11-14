@@ -25,6 +25,13 @@
             android:layout_height="wrap_content"
             android:text="Spectum popup"
             android:onClick="onClickPopUp"/>
+        <Button
+            android:id="@+id/popupChangePen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ChagePen"
+            android:onClick="onClickChangePen"/>
+
 
 
 
