@@ -31,7 +31,8 @@
             android:name="rewind.hanyang.se.rewind_se.SpectrumActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name="rewind.hanyang.se.rewind_se.DrawActivity" />
         <activity
             android:name="rewind.hanyang.se.rewind_se.SavePopActivity"

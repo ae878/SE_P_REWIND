@@ -22,7 +22,7 @@ public class Pen extends Paint {
     //    this.setStrokeCap(Cap.ROUND);
 
         //this.setDither(true);
-        this.setAlpha(20);
+      //  this.setAlpha(20);
        // this.setStrokeJoin(Join.ROUND);
        // this.setStrokeCap(Cap.ROUND);
     }

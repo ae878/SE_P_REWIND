@@ -1770,13 +1770,14 @@ containing a value of this type.
         public static final int black=0x7f02004c;
         public static final int blue=0x7f02004d;
         public static final int green=0x7f02004e;
-        public static final int notification_template_icon_bg=0x7f020055;
+        public static final int notification_template_icon_bg=0x7f020056;
         public static final int pink=0x7f02004f;
         public static final int red=0x7f020050;
-        public static final int skyblue=0x7f020051;
-        public static final int spectrum=0x7f020052;
-        public static final int spectrum2=0x7f020053;
-        public static final int yellow=0x7f020054;
+        public static final int showcolor=0x7f020051;
+        public static final int skyblue=0x7f020052;
+        public static final int spectrum=0x7f020053;
+        public static final int spectrum2=0x7f020054;
+        public static final int yellow=0x7f020055;
     }
     public static final class id {
         public static final int action0=0x7f0b005d;
@@ -1869,6 +1870,7 @@ containing a value of this type.
         public static final int showCustom=0x7f0b000f;
         public static final int showHome=0x7f0b0010;
         public static final int showTitle=0x7f0b0011;
+        public static final int showcolor=0x7f0b0071;
         public static final int spacer=0x7f0b002f;
         public static final int spectrumImage=0x7f0b006b;
         public static final int spectrumRGB=0x7f0b0070;

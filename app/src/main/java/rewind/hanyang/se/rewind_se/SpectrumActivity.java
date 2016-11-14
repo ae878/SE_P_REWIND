@@ -22,8 +22,7 @@ import android.widget.TextView;
 public class SpectrumActivity extends Activity {
 
     ImageView spectrumImage; // 스펙트럼 터치 좌표를 얻기 위한 변수
-
-    float spectrumX,spectrumY; // 스펙트럼 좌표 얻어오는 변수
+    ImageView showColor ; // 스펙트럼에서 선택한 색 보여줌
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,26 +39,24 @@ public class SpectrumActivity extends Activity {
         setContentView(R.layout.popup_spectrum);
 
         spectrumImage = (ImageView)findViewById(R.id.spectrumImage);
-
-
-        System.out.println("HHHHH"+spectrumImage.getTop()+spectrumImage.getRight()) ;
+        showColor = (ImageView)findViewById(R.id.showcolor);
 
         spectrumImage.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
+                Bitmap bitmap = ((BitmapDrawable)((ImageView)v).getDrawable()).getBitmap();
+                Bitmap mBitmap = Bitmap.createScaledBitmap(bitmap,(spectrumImage.getWidth()),(spectrumImage.getHeight()),true); //비트맵 크기 조절
 
-                final Bitmap mBitmap = ((BitmapDrawable)((ImageView)v).getDrawable()).getBitmap();
-                int mPixel = mBitmap.getPixel((int)event.getY(), (int)event.getY());
+                int mPixel = mBitmap.getPixel((int)(event.getX()), (int)(event.getY()));
 
-                System.out.println(("QQ    "+event.getX()+"  "+ event.getY()));
+                int R = (mPixel & 0xff0000) >> 16;
+                int G = (mPixel & 0x00ff00) >> 8;
+                int B = (mPixel & 0x0000ff) >> 0;
 
-                int A = Color.alpha(mPixel);
-                int R = Color.red(mPixel);
-                int G = Color.blue(mPixel);
-                int B = Color.green(mPixel);
+                DrawActivity.selectColor=Color.argb(255,R,G,B); // 펜 색 설정
+                showColor.setBackgroundColor(Color.argb(255,R,G,B)); //설정한 색 보여주기
 
-                DrawActivity.selectColor=Color.argb(255,R,G,B);
                 return false;
             }
         });

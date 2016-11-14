@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:id="@+id/popupSpectrum"
     android:weightSum="1">
 
@@ -13,9 +12,13 @@
         android:src="@drawable/spectrum2"
         android:id="@+id/spectrumImage"
         android:scaleType="fitXY" />
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
     <ImageView
         android:layout_width="60dp"
@@ -87,6 +90,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spectrumRGB"/>
+
+        <ImageView
+            android:layout_height="70dp"
+             android:layout_width="70dp"
+            android:id="@+id/showcolor"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="명암 up"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다운 up"/>
+
 
     </LinearLayout>
 </LinearLayout>

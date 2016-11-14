@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\mijin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_369ffe023e8c6735fb9e39469abeec0ec013abef\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
         <dex dex="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_52ef8b74832b769b34d62910371f18dc575f4644\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mijin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_369ffe023e8c6735fb9e39469abeec0ec013abef\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="119c8eaf152971e2df77b5b3485c600871df18ef">
+        sha1="9359609511f9a13bb71aec63d54ac43cfead2765">
         <dex dex="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2f1f762f75fefc6313b70a6ba94b9bccfeffb165\classes.dex" />
     </item>
     <item
@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="96af451d77159f10f331f2ae900d9ac76d88231f">
+        sha1="a1e44d270c4b097638360dadcea8195d85a7dfe6">
         <dex dex="C:\Users\mijin\AndroidProject\SE_P_REWIND\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3f17072e6e2547af95de055a9a79947fc018a4d5\classes.dex" />
     </item>
     <item

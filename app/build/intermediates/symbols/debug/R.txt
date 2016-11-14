@@ -479,13 +479,14 @@ int drawable abc_textfield_search_material 0x7f02004b
 int drawable black 0x7f02004c
 int drawable blue 0x7f02004d
 int drawable green 0x7f02004e
-int drawable notification_template_icon_bg 0x7f020055
+int drawable notification_template_icon_bg 0x7f020056
 int drawable pink 0x7f02004f
 int drawable red 0x7f020050
-int drawable skyblue 0x7f020051
-int drawable spectrum 0x7f020052
-int drawable spectrum2 0x7f020053
-int drawable yellow 0x7f020054
+int drawable showcolor 0x7f020051
+int drawable skyblue 0x7f020052
+int drawable spectrum 0x7f020053
+int drawable spectrum2 0x7f020054
+int drawable yellow 0x7f020055
 int id action0 0x7f0b005d
 int id action_bar 0x7f0b0045
 int id action_bar_activity_content 0x7f0b0000
@@ -576,6 +577,7 @@ int id shortcut 0x7f0b003d
 int id showCustom 0x7f0b000f
 int id showHome 0x7f0b0010
 int id showTitle 0x7f0b0011
+int id showcolor 0x7f0b0071
 int id spacer 0x7f0b002f
 int id spectrumImage 0x7f0b006b
 int id spectrumRGB 0x7f0b0070

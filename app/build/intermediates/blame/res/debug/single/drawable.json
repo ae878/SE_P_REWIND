@@ -8,12 +8,12 @@
         "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spectrum.png",
         "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\src\\main\\res\\drawable\\spectrum.png"
+    },
+    {
+        "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -158,6 +158,10 @@
     {
         "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
         "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\showcolor.png",
+        "source": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\src\\main\\res\\drawable\\showcolor.png"
     },
     {
         "merged": "C:\\Users\\mijin\\AndroidProject\\SE_P_REWIND\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
