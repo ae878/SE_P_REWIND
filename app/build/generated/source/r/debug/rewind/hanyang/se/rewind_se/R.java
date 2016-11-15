@@ -1769,15 +1769,18 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f02004b;
         public static final int black=0x7f02004c;
         public static final int blue=0x7f02004d;
-        public static final int green=0x7f02004e;
-        public static final int notification_template_icon_bg=0x7f020056;
-        public static final int pink=0x7f02004f;
-        public static final int red=0x7f020050;
-        public static final int showcolor=0x7f020051;
-        public static final int skyblue=0x7f020052;
-        public static final int spectrum=0x7f020053;
-        public static final int spectrum2=0x7f020054;
-        public static final int yellow=0x7f020055;
+        public static final int eraser=0x7f02004e;
+        public static final int green=0x7f02004f;
+        public static final int highlighter=0x7f020050;
+        public static final int notification_template_icon_bg=0x7f020059;
+        public static final int pencil=0x7f020051;
+        public static final int pink=0x7f020052;
+        public static final int red=0x7f020053;
+        public static final int showcolor=0x7f020054;
+        public static final int skyblue=0x7f020055;
+        public static final int spectrum=0x7f020056;
+        public static final int spectrum2=0x7f020057;
+        public static final int yellow=0x7f020058;
     }
     public static final class id {
         public static final int action0=0x7f0b005e;
@@ -1799,7 +1802,8 @@ containing a value of this type.
         public static final int add=0x7f0b0013;
         public static final int alertTitle=0x7f0b0033;
         public static final int always=0x7f0b001d;
-        public static final int b=0x7f0b0072;
+        public static final int b=0x7f0b0073;
+        public static final int back=0x7f0b006e;
         public static final int beginning=0x7f0b001a;
         public static final int bottom=0x7f0b0022;
         public static final int buttonPanel=0x7f0b002e;
@@ -1807,7 +1811,7 @@ containing a value of this type.
         public static final int checkbox=0x7f0b003c;
         public static final int chronometer=0x7f0b0065;
         public static final int collapseActionView=0x7f0b001e;
-        public static final int colorInputButton=0x7f0b0073;
+        public static final int colorInputButton=0x7f0b0074;
         public static final int contentPanel=0x7f0b0034;
         public static final int custom=0x7f0b003a;
         public static final int customPanel=0x7f0b0039;
@@ -1821,7 +1825,7 @@ containing a value of this type.
         public static final int eraser=0x7f0b006d;
         public static final int expand_activities_button=0x7f0b0028;
         public static final int expanded_menu=0x7f0b003b;
-        public static final int g=0x7f0b0071;
+        public static final int g=0x7f0b0072;
         public static final int highlighter=0x7f0b006c;
         public static final int home=0x7f0b0004;
         public static final int homeAsUp=0x7f0b000d;
@@ -1847,11 +1851,11 @@ containing a value of this type.
         public static final int popupChangePen=0x7f0b0057;
         public static final int popupEdit=0x7f0b005d;
         public static final int popupLayout=0x7f0b005c;
-        public static final int popupSpectrum=0x7f0b006e;
+        public static final int popupSpectrum=0x7f0b006f;
         public static final int popupSpectrumButton=0x7f0b0056;
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
-        public static final int r=0x7f0b0070;
+        public static final int r=0x7f0b0071;
         public static final int radio=0x7f0b003e;
         public static final int rollingButton=0x7f0b005b;
         public static final int saveButton=0x7f0b0055;
@@ -1874,10 +1878,10 @@ containing a value of this type.
         public static final int showCustom=0x7f0b000f;
         public static final int showHome=0x7f0b0010;
         public static final int showTitle=0x7f0b0011;
-        public static final int showcolor=0x7f0b0075;
+        public static final int showcolor=0x7f0b0076;
         public static final int spacer=0x7f0b002f;
-        public static final int spectrumImage=0x7f0b006f;
-        public static final int spectrumRGB=0x7f0b0074;
+        public static final int spectrumImage=0x7f0b0070;
+        public static final int spectrumRGB=0x7f0b0075;
         public static final int split_action_bar=0x7f0b0007;
         public static final int src_atop=0x7f0b0016;
         public static final int src_in=0x7f0b0017;
@@ -1896,8 +1900,8 @@ containing a value of this type.
         public static final int topPanel=0x7f0b0031;
         public static final int up=0x7f0b0008;
         public static final int useLogo=0x7f0b0012;
-        public static final int valueDown=0x7f0b0077;
-        public static final int valueUp=0x7f0b0076;
+        public static final int valueDown=0x7f0b0078;
+        public static final int valueUp=0x7f0b0077;
         public static final int withText=0x7f0b0021;
         public static final int wrap_content=0x7f0b0019;
     }

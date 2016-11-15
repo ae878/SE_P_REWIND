@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainLayout"
+    android:id="@+id/popupChangePen"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
@@ -10,29 +10,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
 
         <Button
             android:id="@+id/pencil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="pencil"
-            android:onClick="onClickPencil"/>
+            android:onClick="onClickPencil"
+            android:background="@drawable/pencil"/>
 
         <Button
             android:id="@+id/highlighter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="highlighter"
             android:onClick="onClickHighlighter"
+            android:background="@drawable/highlighter"
             />
         <Button
             android:id="@+id/eraser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="eraser"
             android:onClick="onClickEraser"
+            android:background="@drawable/eraser"
+            />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBack"
+            android:text="back"
             />
     </LinearLayout>
 

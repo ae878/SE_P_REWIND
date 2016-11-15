@@ -10,20 +10,15 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewDebug;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -37,8 +32,11 @@ import java.io.InputStream;
  */
 public class DrawActivity extends Activity {
 
+    /* Intent ,, for result */
     final int SAVE_IMAGE = 0;
     final int LOAD_IMAGE = 1;
+    final int PEN_CHANGE = 2;
+
 
     DrawPoint drawPoint; // 그려지는 점들의 데이터
     CanvasView mView; // 그림을 그릴 캔버스
@@ -48,10 +46,7 @@ public class DrawActivity extends Activity {
     static Pen selectPen;
 
     Bitmap loadImage = null;
-
-    private PopupWindow pwindo; // popupwindow를 위한 변수
     ImageView spectrumImage; // 스펙트럼 이미지뷰
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +66,6 @@ public class DrawActivity extends Activity {
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 
         setContentView(R.layout.activity_draw);
 
@@ -98,6 +92,14 @@ public class DrawActivity extends Activity {
         mView.setDrawingCacheEnabled(true); // view 가 변할때 마다 Cache로 저장
         drawPoint = new DrawPoint(); // 터치된 점을 관리 할 Class
         selectPen = new Pen(Color.BLACK, Pen.PENCIL);
+
+        ImageButton pentypeButton = (ImageButton)findViewById(R.id.popupChangePen);
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) pentypeButton.getLayoutParams();
+        params.width = MainActivity.SCREEN_WIDTH/7;
+        params.height=MainActivity.SCREEN_WIDTH/7;
+        pentypeButton.setImageResource(R.drawable.pencil);
+
+
     }
 
     /*______ onTouchEvent ______
@@ -127,8 +129,6 @@ public class DrawActivity extends Activity {
      * Canvas
      */
     public  class CanvasView extends View {
-        Bitmap tempImage =null;
-        Bitmap cache = null;
         public CanvasView( Context context){
             super(context);
 
@@ -140,7 +140,7 @@ public class DrawActivity extends Activity {
 
         public void drawCanvas(Canvas canvas){
                 for (int i = 1; i < drawPoint.arrayTouchPoint.size(); i++)
-                    if (drawPoint.arrayTouchPoint.get(i).draw) {
+                    if (drawPoint.isDraw(i)) {
                         canvas.drawLine(drawPoint.getX(i - 1), drawPoint.getY(i - 1)
                                 , drawPoint.getX(i), drawPoint.getY(i), drawPoint.getPaint(i));
                     } else {
@@ -168,33 +168,7 @@ public class DrawActivity extends Activity {
    * .스펙트럼 팝업창 띄우는 버튼
    */
     public void onClickPopUp(View v){
-     /*   LayoutInflater inflater = (LayoutInflater) DrawActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        View layout = inflater.inflate(R.layout.popup_spectrum,(ViewGroup) findViewById(R.id.popupSpectrum));
-
-
-        pwindo = new PopupWindow(layout, MainActivity.SCREEN_WIDTH-100, MainActivity.SCREEN_HEIGHT-500, true);
-        pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
-        pwindo.setTouchable(true); // 팝업창 터치 되게 설정
-
-
-        layout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                spectrumX = event.getX();
-                spectrumY= event.getY();
-
-                System.out.println("QQ"+spectrumX+"      "+spectrumY);
-
-                spectrumRGB = (TextView)findViewById(R.id.spectrumRGB);
-                spectrumRGB.setText("hi");
-                return false;
-            }
-        });*/
-
         startActivity(new Intent(this,SpectrumActivity.class));
-
     }
 
     /*______ onClickChangePen ______
@@ -202,9 +176,10 @@ public class DrawActivity extends Activity {
    *  펜의 종류를 편경하는 팝업
    */
     public void onClickChangePen(View v){
-        startActivity(new Intent(this,ChangePenActivity.class));
-    }
+        Intent intent = new Intent(DrawActivity.this,ChangePenActivity.class);
+        startActivityForResult(intent,PEN_CHANGE);
 
+    }
 
     /*______ onActivityResult ______
         * 16-10-11
@@ -227,9 +202,24 @@ public class DrawActivity extends Activity {
                         InputStream stream = getContentResolver().openInputStream(data.getData());
                         loadImage = BitmapFactory.decodeStream(stream);
                     } catch (Exception e) {
-
+                        return;
                     }
                 break;
+                case PEN_CHANGE:
+                    Log.d("ddd","ddd");
+                    ImageButton pentypeButton = (ImageButton)findViewById(R.id.popupChangePen);
+                    switch(data.getIntExtra("PEN_TYPE",1)){
+                        case Pen.PENCIL:
+                            pentypeButton.setImageResource(R.drawable.pencil);
+                            break;
+                        case Pen.ERASER:
+                            pentypeButton.setImageResource(R.drawable.eraser);
+                            break;
+                        case Pen.HIGHLIGHTER:
+                            pentypeButton.setImageResource(R.drawable.highlighter);
+                            break;
+                    }
+                    break;
 
             }
         }
@@ -261,81 +251,6 @@ public class DrawActivity extends Activity {
         return true;
     }
 
-    /*______ onClickRed ______
-     * 16-11-01
-     * .페인트 색 레드로 변경
-     */
-    public void onClickRed(View v){
-        selectPen.setColor(Color.RED);
-    }
-
-    /*______ onClickBlue ______
-     * 16-11-02
-     * .페인트 색 블루로 변경
-     */
-    public void onClickBlue(View v){
-        selectPen.setColor(Color.BLUE);
-    }
-
-
-
-    /*______ onClickGreen ______
-     * 16-11-02
-     * .페인트 색 그린으로 변경
-     */
-    public void onClickGreen(View v){
-        selectPen.setColor(Color.GREEN);
-    }
-
-
-    /*______ onClickPink ______
-     * 16-11-02
-     * 페인트 색 핑크로 변경
-     */
-    public void onClickPink(View v){
-        selectPen.setColor(Color.MAGENTA);
-    }
-
-
-    /*______ onClickSkyBlue ______
-     * 16-11-02
-     * 페인트 색 하늘색으로 변경
-     */
-    public void onClickYellow(View v){
-        selectPen.setColor(Color.YELLOW);
-    }
-
-    /*______ onClickSkyYellow ______
-   * 16-11-02
-   * 페인트 색 노랑으로 변경
-   */
-    public void onClickSkyBlue(View v){
-        //drawPoint.paint.setARGB(255,125,200,255);
-
-    }
-
-
-    /*______ onClickSkyBlck ______
-   * 16-11-02
-   * 페인트 색 블랙으로 변경
-   */
-    public void onClickBlack(View v){
-        selectPen.setColor(Color.BLACK);
-    }
-
-    /*______ onClickInput ______
-     * 16-11-02
-     * 컬러 인풋
-     */
-    public void onClickInput(View v){
-
-        EditText colorR=(EditText)findViewById(R.id.r); //rgb r 값 받아오기
-        EditText colorG=(EditText)findViewById(R.id.g); //rgb g 값 받아오기
-        EditText colorB=(EditText)findViewById(R.id.b); // rgb b값 받아오기
-
-      //  drawPoint.paint.setARGB(255,Integer.parseInt(colorR.getText().toString()),Integer.parseInt(colorG.getText().toString()),Integer.parseInt(colorB.getText().toString()));
-        // 받은 rgb 설정, 불투명
-    }
 
 
 

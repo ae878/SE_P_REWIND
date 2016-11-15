@@ -1,4 +1,4 @@
-#Tue Nov 15 01:48:49 KST 2016
+#Tue Nov 15 15:34:10 KST 2016
 base.0=C\:\\AndroidStudy\\rewind_se\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4ce468e564b6af4e97f2715d7e607d896aca1637
 renamed.1=classes.dex
 renamed.0=classes2.dex

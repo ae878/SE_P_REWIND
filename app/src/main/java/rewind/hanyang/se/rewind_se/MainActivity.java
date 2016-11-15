@@ -25,7 +25,6 @@ public class MainActivity extends Activity {
 
         this.init();
         setContentView(R.layout.activity_main);
-
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);

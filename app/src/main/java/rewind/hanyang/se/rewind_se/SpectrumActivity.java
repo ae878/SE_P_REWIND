@@ -3,21 +3,18 @@ package rewind.hanyang.se.rewind_se;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 /**
  * Created by mijin on 2016-11-12.
+ *
  */
 
 public class SpectrumActivity extends Activity {
@@ -29,7 +26,6 @@ public class SpectrumActivity extends Activity {
     Button valueDown;
 
     float hsv[] = new float[3];
-    int colorValue=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,9 +58,11 @@ public class SpectrumActivity extends Activity {
 
                 int R = (mPixel & 0xff0000) >> 16;
                 int G = (mPixel & 0x00ff00) >> 8;
-                int B = (mPixel & 0x0000ff) >> 0;
+                int B = (mPixel & 0x0000ff);
 
                 DrawActivity.selectPen.setColor(Color.argb(255,R,G,B)); // 펜 색 설정
+                DrawActivity.selectPen.setType(DrawActivity.selectPen.getType());
+                DrawActivity.selectPen.setType(DrawActivity.selectPen.getType());
                 showColor.setBackgroundColor(Color.argb(255,R,G,B)); //설정한 색 보여주기
 
                 Color.RGBToHSV(R,G,B,hsv);
@@ -74,17 +72,20 @@ public class SpectrumActivity extends Activity {
 
     }
     public void onClickValueUP(View v){
-       
+
         hsv[2] = hsv[2]+(float)0.01;
 
         DrawActivity.selectPen.setColor(Color.HSVToColor(hsv)); // 펜 색 설정
+        DrawActivity.selectPen.setType(DrawActivity.selectPen.getType());
         showColor.setBackgroundColor( Color.HSVToColor(hsv)); //설정한 색 보여주기
+
     }
 
     public void onClickValueDown(View v){
         hsv[2] = hsv[2]-(float)0.01;
 
         DrawActivity.selectPen.setColor(Color.HSVToColor(hsv)); // 펜 색 설정
+        DrawActivity.selectPen.setType(DrawActivity.selectPen.getType());
         showColor.setBackgroundColor(Color.HSVToColor(hsv)); //설정한 색 보여주기
     }
 

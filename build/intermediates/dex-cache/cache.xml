@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="e7a6b53474dc55c0f638bd10e1b667b51f140055">
+        sha1="ff184c20b3bd24b18642cff5f3862541ed398134">
         <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4ce468e564b6af4e97f2715d7e607d896aca1637\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="0ef6d70bf1237cbaa71c21e117f2b37340fd09ce">
+        sha1="3606ee19f5796e2989e08d5e22c6e1db949ab0cd">
         <dex dex="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4462a8bb9abdfc8d385f8040720eeacf9dfaf06d\classes.dex" />
     </item>
     <item

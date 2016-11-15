@@ -8,7 +8,6 @@ import android.view.Window;
 import android.widget.EditText;
 
 public class SavePopActivity extends Activity {
-    public SavePopActivity(){};
     EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

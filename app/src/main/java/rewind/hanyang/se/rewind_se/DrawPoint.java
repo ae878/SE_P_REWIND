@@ -1,48 +1,43 @@
 package rewind.hanyang.se.rewind_se;
 
-import android.graphics.Color;
 import android.graphics.Paint;
 
 import java.util.ArrayList;
 
 /**
  * Created by ywon on 2016-10-09.
+ *
  */
-public class DrawPoint {
-    final int MAX_POINT = 100;
-
+class DrawPoint {
     ArrayList<TouchPoint> arrayTouchPoint;
 
-    int color= Color.BLACK;
-
-    public DrawPoint(){
-        arrayTouchPoint = new ArrayList<TouchPoint>();
+    DrawPoint(){
+        arrayTouchPoint = new ArrayList<>();
     }
 
-    public class TouchPoint{
+    private class TouchPoint{
         float x;
         float y;
         boolean draw;
         Pen pen;
-        public TouchPoint(float x, float y, Pen pen){
+        private TouchPoint(float x, float y, Pen pen){
             this.x = x;
             this.y = y;
             this.pen = new Pen(pen);
         }
     }
 
-    public float getX(int index){
+    float getX(int index){
         return arrayTouchPoint.get(index).x;
     }
-    public float getY(int index){
+    float getY(int index){
         return arrayTouchPoint.get(index).y;
     }
-    public Paint getPaint(int index){ return arrayTouchPoint.get(index).pen;}
-    public boolean isFull(){ return arrayTouchPoint.size()>=MAX_POINT;}
-    public void pointClear(){arrayTouchPoint.clear();}
+    boolean isDraw(int index){ return arrayTouchPoint.get(index).draw;}
+    Paint getPaint(int index){ return arrayTouchPoint.get(index).pen;}
 
 
-    public void addPoint(float x, float y, boolean draw , Pen pen){
+    void addPoint(float x, float y, boolean draw , Pen pen){
         arrayTouchPoint.add(new TouchPoint(x,y,pen));
         arrayTouchPoint.get(arrayTouchPoint.size()-1).draw = draw;
     }

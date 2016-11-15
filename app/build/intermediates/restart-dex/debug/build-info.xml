@@ -5,40 +5,47 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="78564646442700"
+    timestamp="13562268584856"
     token="-3105755780286518223"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="368" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="36" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3" />
+        duration="0" />
 
     <artifact
-        location="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-        type="DEX" />
+        location="C:\AndroidStudy\rewind_se\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
-        timestamp="78278563778994"
+        timestamp="11008407335457"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\AndroidStudy\rewind_se\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="78564646442700"
+        timestamp="13506452132724"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\AndroidStudy\rewind_se\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="13562268584856"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\AndroidStudy\rewind_se\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
