@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:text="Spectum popup"
             android:onClick="onClickPopUp"/>
+
         <ImageButton
             android:id="@+id/popupChangePen"
             android:layout_width="wrap_content"
